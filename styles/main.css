@@ -1,12 +1,79 @@
 /* 
 =======================
-Normalize
+Normalize, imports
 =======================
 */
-@import url('./normalize.css');
+/* @import './normalize.css'; */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:wght@200;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:wght@200;400&family=Roboto+Slab:wght@300;400&display=swap');
+/* 
+=======================
+Variables
+=======================
+*/
 
+:root {
+  /* Colors */
+  --primary1: #63a5cf;
+  --primary2: #345ea2;
+  --primary3: #122349;
+  --secondary1: #91b35e;
+  --secondary3: #8fac77;
+  --secondary2: #b1d35f;
+  --secondary3: #334229;
+  --white: #f8f8ff;
+  --black: #2b2b2b;
+  /* Fonts */
+  --headlineFont: 'Roboto Slab', serif;
+  --bodyFont: 'Roboto Slab', serif;
+}
 /* 
 =======================
 Global styles
 =======================
 */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /* font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif; */
+  font-family: var(--bodyFont);
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+/* 
+=======================
+Hero section
+=======================
+*/
+.hero {
+  background: var(--primary1);
+  color: var(--white);
+  clip-path: polygon(0, 0, 100vh, 70vh);
+}
+.hero-center {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  min-height: 70vh;
+  width: 90vw;
+  margin: 0 auto;
+}
+.hero-image-container {
+  display: none;
+  width: 15rem;
+}
+.hero-image {
+  object-fit: cover;
+  border-radius: 2rem;
+  height: 20rem;
+  width: 15rem;
+}
