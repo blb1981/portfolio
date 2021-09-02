@@ -4,7 +4,8 @@ Normalize, imports
 =======================
 */
 /* @import './normalize.css'; */
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap"); /* 
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap"); /* 
 =======================
 Variables
 =======================
@@ -14,6 +15,7 @@ Variables
   /* Colors */
   --clrBlue: #424c6e;
   --clrLightBlue: #b0cbd3;
+  --clrDarkBlue: #141c35;
   --clrLightGreen: #8ba5a4;
   --clrOrange: #f0bb98;
   --clrLightOrange: #e7c7a7;
@@ -23,7 +25,7 @@ Variables
   --lightGray: #eeeeee;
 
   --white: #ffffff;
-  --black: #000000;
+  --black: #0e0e0e;
   --lightBlack: #585858;
 
   /* Fonts */
@@ -53,6 +55,7 @@ Global styles
 body {
   font-family: var(--bodyFont);
   color: var(--clrBlue);
+  line-height: 1.5;
 }
 h1,
 h2,
@@ -190,7 +193,7 @@ Side navigation
   transform: translateX(-100%);
   z-index: 1;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .side-nav {
     width: 50vw;
     max-width: 22.5rem;
@@ -202,9 +205,11 @@ Side navigation
   transition: var(--transition);
 }
 .nav-header {
-  padding: 0.5rem;
+  padding: 2rem 2rem 2rem 1rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--white);
 }
 .nav-close-button {
   color: var(--clrRed);
@@ -217,9 +222,9 @@ Side navigation
 }
 .nav-link {
   display: block;
-  font-size: 2rem;
-  padding: 0.25rem 1rem;
-  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
   color: var(--clrBlue);
   transition: var(--transition);
 }
@@ -227,12 +232,12 @@ Side navigation
   border-left: 0.25rem solid var(--clrBlue);
   background-color: var(--clrOrange);
 }
+.nav-link:hover {
+  padding-left: 1.25rem;
+}
 @media screen and (min-width: 992px) {
   .nav-link {
     padding: 0.25rem 2rem;
-  }
-  .nav-link:hover {
-    padding-left: 2.5rem;
   }
 }
 .nav-open-button {
@@ -261,27 +266,50 @@ Top navigation
 */
 .top-nav {
   display: none;
+  background: var(--white);
+}
+.text-logo {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-family: var(--headlineFont);
+  text-shadow: 10px 10px 10px 10px black;
+}
+.first-name {
+  color: var(--clrBlue);
+}
+.last-name {
+  color: var(--clrLightGreen);
 }
 .top-nav-links {
   list-style: none;
   display: flex;
-  background: green;
+  /* background: green; */
   justify-self: end;
+  justify-content: space-between;
+  grid-column-start: 3;
+  width: 100%;
 }
 .top-nav-link {
-  background: orange;
+  /* background: orange; */
+  color: var(--clrBlue);
+  transition: var(--transition);
+}
+.top-nav-link:hover {
+  /* background: orange; */
+  color: var(--clrLightBlue);
 }
 .top-nav-center {
   display: grid;
   font-size: 1rem;
-  grid-template-columns: 20% 1fr;
-  background: yellow;
+  grid-template-columns: 30% 1fr 50%;
+  /* background: yellow; */
   max-width: 1170px;
   margin: 0 auto;
   align-items: center;
+  padding: 0.5rem 1rem;
 }
 .logo-container {
-  background: pink;
+  /* background: pink; */
 }
 @media screen and (min-width: 992px) {
   .top-nav {
@@ -289,7 +317,9 @@ Top navigation
     position: fixed;
     top: 0;
     width: 100%;
-    background: red;
+    /* background: red; */
+    box-shadow: var(--dark-shadow);
+    z-index: 1;
   }
 }
 /* 
@@ -299,6 +329,7 @@ Hero section
 */
 .hero {
   background: var(--clrLightBlue);
+  min-height: 100vh;
 }
 .hero .underline {
   margin-bottom: 0.5rem;
@@ -308,10 +339,8 @@ Hero section
   display: none;
 }
 .hero-center {
-  /* TODO: calculate height based on top nav here */
-  /* min-height: calc(100vh - 5rem); */
-  min-height: 100vh;
-  /* remove line above after calculated */
+  min-height: calc(100vh - 64px);
+  padding-top: 64px;
   display: grid;
   place-items: center;
   column-gap: 2rem;
@@ -371,11 +400,66 @@ About section
 }
 /* 
 =======================
-Services section
+Stack section
 =======================
 */
-.services {
+.stack {
   background: var(--lightGray);
 }
-.services-center {
+.stack-center {
+}
+/* 
+=======================
+Projects section
+=======================
+*/
+
+/* 
+=======================
+Work section
+=======================
+*/
+
+/* 
+=======================
+Footer
+=======================
+*/
+.footer {
+  background: var(--clrBlue);
+  color: var(--white);
+  text-align: center;
+}
+.footer-nav-links {
+  display: flex;
+  justify-content: space-between;
+  max-width: 30rem;
+  margin: 0 auto 1.5rem auto;
+}
+.footer-nav-link {
+  color: var(--white);
+  transition: var(--transition);
+}
+.footer-nav-link:hover {
+  color: var(--clrLightBlue);
+}
+.footer-social-icons {
+  display: flex;
+  justify-content: space-between;
+  max-width: 20rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+.footer-social-icon {
+  color: var(--white);
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+.footer-social-icon:hover {
+  color: var(--clrLightBlue);
+}
+.copyright {
+  color: var(--white);
+  text-transform: capitalize;
+  font-size: .75rem;
 }
