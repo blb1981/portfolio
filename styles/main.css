@@ -247,7 +247,7 @@ Side navigation
   cursor: pointer;
   transition: var(--transition);
   text-shadow: var(--light-shadow);
-  color: var(--clrGray);
+  color: var(--clrLightBrown);
   z-index: 1;
 }
 .nav-open-button:hover {
@@ -350,7 +350,14 @@ Hero section
   column-gap: 2rem;
 }
 .hero-icons {
-  justify-items: start;
+  justify-content: start;
+  /* background: red;; */
+}
+.hero-icons a {
+  display: inline-block;
+  /* background: yellow; */
+  font-size: 2.5rem;
+  padding-right: 2rem;
 }
 .hero-icons .social-icon:hover {
   color: var(--clrGray);
@@ -454,7 +461,7 @@ Projects section
   text-align: center;
   /* background: var(--clrLightGray); */
   border-radius: var(--radius);
-  box-shadow: var(--darker-shadow);
+  box-shadow: var(--light-shadow);
   transition: var(--transition);
   max-width: 30rem;
   margin-bottom: 3rem;
@@ -463,7 +470,7 @@ Projects section
   /* background: lightslategrey; */
 }
 .project:hover {
-  box-shadow: var(--hover-shadow);
+  box-shadow: var(--dark-shadow);
   transform: var(--hover-transform);
 }
 .project-title {
@@ -474,8 +481,10 @@ Projects section
   background: var(--clrDarkBlue);
 }
 .project-screenshot-container {
-  box-shadow: var(--light-shadow);
+  /* box-shadow: var(--light-shadow); */
   position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
 }
 .project-screenshot {
   /* height: 11.5rem; */
@@ -486,6 +495,7 @@ Projects section
   padding: 1.5rem 0.5rem;
   /* background: yellow; */
   background-color: var(--clrWhite);
+  display: none;
 }
 .project-footer {
   display: flex;
@@ -494,7 +504,7 @@ Projects section
   padding: 1rem 0;
   border-bottom-left-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
-  background: var(--clrLightGray);
+  background: var(--clrWhite);
 }
 .project-btn {
   font-size: 0.875rem;
@@ -544,7 +554,7 @@ Footer
 }
 .footer-social-icons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   max-width: 20rem;
   margin: 0 auto;
   margin: 1.5rem auto;
@@ -553,6 +563,7 @@ Footer
   color: var(--clrWhite);
   font-size: 1.5rem;
   transition: var(--transition);
+  padding: 0 1.5rem;
 }
 .footer-social-icon:hover {
   color: var(--clrGray);
