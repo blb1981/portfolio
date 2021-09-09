@@ -430,10 +430,10 @@ Stack section
   /* background: red; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-bottom: 2rem;
+  
   gap: 2rem;
   max-width: 30rem;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
 }
 .tech-stack-images img {
   /* background: yellow; */
