@@ -430,7 +430,7 @@ Stack section
   /* background: red; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  
+  width: 85vw;
   gap: 2rem;
   max-width: 30rem;
   margin: 0 auto 2rem auto;
