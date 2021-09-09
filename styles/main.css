@@ -555,7 +555,15 @@ Projects section
 Work section
 =======================
 */
-
+.work {
+  background: var(--clrLightGray);
+}
+.work-center {
+ text-align: center;
+}
+.work h2 {
+  font-size: 3rem;
+}
 /* 
 =======================
 Footer
