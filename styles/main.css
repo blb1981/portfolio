@@ -191,6 +191,7 @@ Side navigation
   transform: translateX(-100%);
   z-index: 2;
   box-shadow: var(--dark-shadow);
+  overflow: auto;
 }
 @media screen and (min-width: 600px) {
   .side-nav {
@@ -425,6 +426,7 @@ Stack section
   margin-bottom: 3rem;
 }
 .stack-center {
+  text-align: center;
 }
 .tech-stack-images {
   /* background: red; */
@@ -453,8 +455,9 @@ Stack section
 }
 .tech-stack-image-attribution-toggle {
   text-align: center;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   cursor: pointer;
+  display: inline-block;
 }
 
 /* 
@@ -542,7 +545,7 @@ Projects section
 }
 .project-btn {
   font-size: 0.875rem;
-  padding: 0.5rem;
+  padding: 0.25rem .5rem;
   font-weight: 400;
   text-transform: capitalize;
   margin: 0.5rem;

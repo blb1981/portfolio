@@ -80,7 +80,6 @@ scrollLinksFooter.forEach((link) => {
     const topNav = document.querySelector(".top-nav")
     let offset = topNav.clientHeight
     let position = element.offsetTop - offset
-    console.log('scrolling to ', position)
     window.scrollTo({
       left: 0,
       top: position,
