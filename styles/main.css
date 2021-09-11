@@ -340,6 +340,23 @@ Hero section
   margin-left: 0;
   background: var(--clrWhite);
 }
+.small-hero-image-container {
+  width: 8rem;
+  box-shadow: var(--dark-shadow);
+}
+.small-hero-image {
+  border-radius: var(--radius);
+}
+@media screen and (min-width: 768px) {
+  .small-hero-image-container {
+    width: 10rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .small-hero-image-container {
+    display: none;
+  }
+}
 .hero-image-container {
   display: none;
 }
@@ -352,13 +369,18 @@ Hero section
 }
 .hero-icons {
   justify-content: start;
+  margin-top: 0;
   /* background: red;; */
 }
 .hero-icons a {
   display: inline-block;
-  /* background: yellow; */
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   padding-right: 2rem;
+}
+@media screen and (min-width: 992px) {
+  .hero-icons a {
+    font-size: 2.5rem;
+  }
 }
 .hero-icons .social-icon:hover {
   color: var(--clrGray);
@@ -366,6 +388,7 @@ Hero section
 .hero-btn {
   margin-top: 1.25rem;
   padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
 }
 @media screen and (min-width: 992px) {
   .hero-image-container {
@@ -451,7 +474,9 @@ Stack section
   margin-bottom: 0;
 }
 .tech-stack-image-attribution-list.open {
-  height: 180px;
+  height: 213px;
+  white-space: nowrap;
+  overflow-y: auto;
 }
 .tech-stack-image-attribution-toggle {
   text-align: center;
@@ -545,7 +570,7 @@ Projects section
 }
 .project-btn {
   font-size: 0.875rem;
-  padding: 0.25rem .5rem;
+  padding: 0.25rem 0.5rem;
   font-weight: 400;
   text-transform: capitalize;
   margin: 0.5rem;
@@ -562,7 +587,7 @@ Work section
   background: var(--clrLightGray);
 }
 .work-center {
- text-align: center;
+  text-align: center;
 }
 .work h2 {
   font-size: 3rem;
