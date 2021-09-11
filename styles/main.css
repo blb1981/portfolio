@@ -476,7 +476,7 @@ Stack section
 .tech-stack-image-attribution-list.open {
   height: 213px;
   white-space: nowrap;
-  overflow-y: auto;
+  overflow-x: auto;
 }
 .tech-stack-image-attribution-toggle {
   text-align: center;
