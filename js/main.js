@@ -87,3 +87,18 @@ scrollLinksFooter.forEach((link) => {
     })
   })
 })
+
+// Smooth scroll, hero button
+const heroWorkButton = document.getElementById('heroWorkButton')
+heroWorkButton.addEventListener('click', (e) => {
+  e.preventDefault()
+  const element = document.getElementById('work')
+  const topNav = document.querySelector('.top-nav')
+  let offset = topNav.clientHeight
+  let position = element.offsetTop - offset
+  window.scrollTo({
+    left: 0,
+    top: position,
+    behavior: 'smooth'
+  })
+})
