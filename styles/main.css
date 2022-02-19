@@ -74,7 +74,7 @@ h2 {
   font-size: 2rem;
 }
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.625rem;
 }
 h4 {
   font-size: 1rem;
@@ -519,7 +519,10 @@ Projects section
 }
 @media screen and (min-width: 1170px) {
   .projects-center {
-    grid-template-columns: 1fr 1fr 1fr;
+    /* 3 Columns */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* 2 Columns */
+    grid-template-columns: 1fr 1fr;
   }
 }
 .project {
@@ -560,7 +563,7 @@ Projects section
   padding: 1.5rem 0.5rem;
   /* background: yellow; */
   background-color: var(--clrWhite);
-  display: none;
+  /* display: none; */
 }
 .project-footer {
   display: flex;
@@ -600,12 +603,12 @@ Work section
   margin: 0 auto;
 }
 .form label {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
-.form-control  {
+.form-control {
   display: block;
   width: 100%;
-  padding: .5rem;
+  padding: 0.5rem;
   border: 2px solid var(--clrLightBrown);
   border-radius: var(--radius);
   font-size: 1rem;
